@@ -30,6 +30,7 @@ Sources:
 * 1 [rainfall-monthly-number-of-rain-days](https://data.gov.sg/dataset/rainfall-monthly-number-of-rain-days)
 * 2 [rainfall-monthly-total](https://data.gov.sg/dataset/rainfall-monthly-maximum-daily-total)
 * 3 [sunshine-monthly-mean](https://data.gov.sg/dataset/sunshine-duration-monthly-mean-daily-duration)
+
 4 to 6 from [EMA Statistics](https://www.ema.gov.sg/Statistics.aspx):
 * 4 [monthly_electricity_generated](https://www.ema.gov.sg/TemStatistic.aspx?pagesid=20210218Z0Z6JYV1gayG&pagemode=live&sta_sid=20140802apItNJRIa9Pa)
 * 5 [monthly-plant-mix](https://www.ema.gov.sg/statistic.aspx?sta_sid=20140802NEeM2zyMguvz)
