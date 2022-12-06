@@ -26,7 +26,7 @@ There are 6 datasets included in the [`data`](./data/) folder for this project. 
 * 6 [`quaterly-mwp-solar.xls`](./data/quaterly-mwp-solar.xls): Quaterly data on Mega Watt Peak (MWp) capacity of Singapore's PV systems connected to gird from 2009 to 2022 Q1.
 
 Sources:
-1 to 3 from [Data.goc.sg](https://data.gov.sg/):
+1 to 3 from [Data.gov.sg](https://data.gov.sg/):
 * 1 [rainfall-monthly-number-of-rain-days](https://data.gov.sg/dataset/rainfall-monthly-number-of-rain-days)
 * 2 [rainfall-monthly-total](https://data.gov.sg/dataset/rainfall-monthly-maximum-daily-total)
 * 3 [sunshine-monthly-mean](https://data.gov.sg/dataset/sunshine-duration-monthly-mean-daily-duration)
