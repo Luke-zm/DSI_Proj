@@ -51,7 +51,7 @@ There are 5 datasets included in the [`data`](./data/) folder for this project. 
 * 2 [`rainfall-monthly-total.csv`](./data/rainfall-monthly-total.csv): Monthly total rain recorded in mm(millimeters) from 1982 to 2022.
 * 3 [`sunshine-monthly-mean.csv`](./data/sunshine-monthly-mean.csv): Monthly data of daily mean sunshine hours in hours from 1982 to 2022.
 * 4 [`monthly-surafce-air-temp-mean.csv`](./data/monthly-surafce-air-temp-mean.csv): Monthly average of surface air temperature.
-* 5 [`sti_m.csv`](./data/sti_m.csv): The value of Striats Time Index on the last day of the month. (https://stooq.com/q/d/?s=%5Esti&c=0&d1=19821228&d2=20230130&l=11&i=m)
+* 5 [`sti_m.csv`](./data/sti_m.csv): The value of Striats Time Index on the last day of the month. 
 
 Sources:
 1 to 4 from [Data.gov.sg](https://data.gov.sg/)
