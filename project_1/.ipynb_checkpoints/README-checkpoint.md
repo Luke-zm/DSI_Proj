@@ -63,7 +63,7 @@ Sources:
 
 The data quality from the various sources are very clean, with no missing data located in the datasets themselves.  
 There ammount of data avaliable is limited by the ammount of STI values obtained from online sources.   
-A total of 419 data point, starting from Dec 1987, ending at Pct 2022 is generated.  
+A total of 419 data point, starting from Dec 1987, ending at Oct 2022 is generated.  
 This dataset contains a 4 weather features, as well as 4 features indicating how the STI performed at the very last day of the month.  
 
 Most of these features shows a large degree of normal distribution amongst values for that feature.  
