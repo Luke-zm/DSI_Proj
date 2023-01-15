@@ -9,5 +9,6 @@ Project 3:
 Project 4:  
 Capstone Project:   
 ---
-Project 1: Examine the correlation between Striats Times Index (STI) and weather features in Singapore.   
+Project 1:   
+Examine the correlation between Striats Times Index (STI) and weather features in Singapore.   
 The detailed README for this project can be found [here](/project_1/README.md).
