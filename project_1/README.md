@@ -1,4 +1,4 @@
-# Analysis of Singapore monthly weather on PV Generation
+# Does Straits Times Index have correlation with weather in Singapore?
 
 ---
 
@@ -6,7 +6,7 @@
 
 > * Weather is an important part of our daily lives. The rainfall, sun shine hours, temperature etc., both reflects what we did to the environment and also affects how we go about our daily lives. Some seemingly unconnected things may seem correlated. Some correlation may happen by pure chance.  
 So looking at the weather data of Singapore, as a data analyst, I am interested to know:  
-- Does increase in Straits Time Index (STI) value at the end of every month have any correlations at all with weather features?  
+- Does increase in Straits Times Index (STI) value at the end of every month have any correlations at all with weather features?  
 - If so, did they happen by pure chance? 
 - Do the features show a positive or negative association with STI, if the association is not by pure chance.
 
