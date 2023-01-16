@@ -1,7 +1,7 @@
 # Prediction of Singapore's housing price using simple regression based models.  
 
 This project is about the prediction of resale price of a house located in singapore, using simple regression model.   
-The project struture is a follows:  
+The project struture is as follows:  
 ```bash
 project_2                                                                                                                       
 ├── code                                                                                                                
