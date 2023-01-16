@@ -3,7 +3,18 @@
 This project is about the prediction of resale price of a house located in singapore, using simple regression model.   
 The project struture is a follows:  
 ```bash
-.                                                                                                                       ├── code                                                                                                                │   ├── house_EDA.ipynb                                                                                                 │   └── house_reg_model.ipynb                                                                                           ├── datasets                                                                                                            │   ├── data_given.txt                                                                                                  │   ├── sample_sub_reg.csv                                                                                              │   ├── test.csv                                                                                                        │   └── train.csv                                                                                                       ├── README_GA.md                                                                                                        ├── README.md                                                                                                           └── suggestions.md    
+project_2                                                                                                                       
+├── code                                                                                                                
+│   ├── house_EDA.ipynb                                                                                                 
+│   └── house_reg_model.ipynb                                                                                           
+├── datasets                                                                                                            
+│   ├── data_given.txt                                                                                                  
+│   ├── sample_sub_reg.csv                                                                                              
+│   ├── test.csv                                                                                                        
+│   └── train.csv                                                                                                       
+├── README_GA.md                                                                                                        
+├── README.md                                                                                                           
+└── suggestions.md    
 ```    
 ---
 contents  
