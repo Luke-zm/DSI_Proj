@@ -19,7 +19,7 @@ project_2
 ---
 contents  
 1. [Problem Statement](#Problem-Statement)  
-2. Exploratary Data Analysis
+2. [Exploratary Data Analysis](./code/house_EDA.ipynb)
 3. Data table/ dictionary
 4. Modelling
 5. Results and Conclusions
