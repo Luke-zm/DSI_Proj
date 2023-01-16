@@ -2,18 +2,9 @@
 
 This project is about the prediction of resale price of a house located in singapore, using simple regression model.   
 The project struture is a follows:  
-
-project_2  
-|
-|--code   
-|   |-- [house_EDA](./code/house_EDA.ipynb)   
-|   |-- [house_reg_model](./code/house_reg_model.ipynb)  
-|   
-|--datasets 
-    |-- [sample_sub_reg](./datasets/sample_sub_reg.csv)
-    |-- [test.csv](./datasets/test.csv)
-    |-- [train.csv](./datasets/train.csv)
-    
+```bash
+.                                                                                                                       ├── code                                                                                                                │   ├── house_EDA.ipynb                                                                                                 │   └── house_reg_model.ipynb                                                                                           ├── datasets                                                                                                            │   ├── data_given.txt                                                                                                  │   ├── sample_sub_reg.csv                                                                                              │   ├── test.csv                                                                                                        │   └── train.csv                                                                                                       ├── README_GA.md                                                                                                        ├── README.md                                                                                                           └── suggestions.md    
+```    
 ---
 contents  
 1. [Problem Statement](#Problem-Statement)  
