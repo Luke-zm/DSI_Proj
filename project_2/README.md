@@ -25,7 +25,7 @@ contents
 5. Results and Conclusions
 
 ---
-##Problem Statement  
+## Problem Statement  
 The goal of this project is to build a regression model, using data contained in the [datasets](./datasets) folder. The model should be able to make an accurate prediction of the resale price (`resale_price`) of the house, for every house id (`Id`) that appeared in the [test set](./datasets/test.csv).  
 Success will be evaluated based on common evaluation metrics such as Mean Absolute Error (MAE) and Mean Square Error (MSE), apart from scores.
 
