@@ -3,7 +3,39 @@
 This project is about the prediction of resale price of a house located in singapore, using simple regression model.   
 The project struture is as follows:  
 ```bash
-project_2                                                                                                                       
+project_2      
+├── code                                                                                                                
+│   ├── house_EDA.ipynb                                                                                                 
+│   ├── house_reg_model.ipynb                                                                                           
+│   └── .ipynb_checkpoints                                                                                              
+│       ├── house_EDA-checkpoint.ipynb                                                                                  
+│       └── house_reg_model-checkpoint.ipynb                                                                            
+├── datasets                                                                                                            
+│   ├── data_dictionary_analysis.csv                                                                                    
+│   ├── data_dictionary_analysis.csv:Zone.Identifier                                                                    
+│   ├── data_given.txt                                                                                                  
+│   ├── .ipynb_checkpoints                                                                                              
+│   │   ├── sample_sub_reg-checkpoint.csv                                                                               
+│   │   ├── test-checkpoint.csv                                                                                         
+│   │   └── train-checkpoint.csv                                                                                        
+│   ├── reduced_train.csv                                                                                               
+│   ├── sample_sub_reg.csv                                                                                              
+│   ├── test.csv                                                                                                        
+│   ├── train.csv                                                                                                       
+│   └── train.csv:Zone.Identifier                                                                                       
+├── img                                                                                                                 
+│   ├── date_dict.png                                                                                                   
+│   ├── date_dict.png:Zone.Identifier                                                                                   
+│   ├── goog_kurtosis.png                                                                                               
+│   └── wiki_skewness.png                                                                                               
+├── .ipynb_checkpoints                                                                                                  
+│   ├── README-checkpoint.md                                                                                            
+│   └── README_GA-checkpoint.md                                                                                         
+├── README_GA.md                                                                                                        
+├── README.md                                                                                                           
+└── suggestions.md  
+
+
 ├── code                                                                                                                
 │   ├── house_EDA.ipynb                                                                                                 
 │   └── house_reg_model.ipynb                                                                                           
