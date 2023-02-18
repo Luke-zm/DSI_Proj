@@ -6,56 +6,39 @@ The project struture is as follows:
 project_2      
 ├── code                                                                                                                
 │   ├── house_EDA.ipynb                                                                                                 
-│   ├── house_reg_model.ipynb                                                                                           
-│   └── .ipynb_checkpoints                                                                                              
-│       ├── house_EDA-checkpoint.ipynb                                                                                  
-│       └── house_reg_model-checkpoint.ipynb                                                                            
-├── datasets                                                                                                            
+│   └── house_reg_model.ipynb                                                                                                                  ├── datasets                                                                                                            
 │   ├── data_dictionary_analysis.csv                                                                                    
-│   ├── data_dictionary_analysis.csv:Zone.Identifier                                                                    
 │   ├── data_given.txt                                                                                                  
-│   ├── .ipynb_checkpoints                                                                                              
-│   │   ├── sample_sub_reg-checkpoint.csv                                                                               
-│   │   ├── test-checkpoint.csv                                                                                         
-│   │   └── train-checkpoint.csv                                                                                        
+│   ├── planning_area.csv                                                                                               
+│   ├── prediction_combi.csv                                                                                            
+│   ├── prediction_enet.csv                                                                                             
+│   ├── prediction_lasso.csv                                                                                            
+│   ├── prediction_linear.csv                                                                                           
 │   ├── reduced_train.csv                                                                                               
 │   ├── sample_sub_reg.csv                                                                                              
 │   ├── test.csv                                                                                                        
-│   ├── train.csv                                                                                                       
-│   └── train.csv:Zone.Identifier                                                                                       
+│   └── train.csv                                                                                                       
 ├── img                                                                                                                 
 │   ├── date_dict.png                                                                                                   
-│   ├── date_dict.png:Zone.Identifier                                                                                   
+│   ├── enet_res.png                                                                                                    
 │   ├── goog_kurtosis.png                                                                                               
-│   └── wiki_skewness.png                                                                                               
-├── .ipynb_checkpoints                                                                                                  
-│   ├── README-checkpoint.md                                                                                            
-│   └── README_GA-checkpoint.md                                                                                         
-├── README_GA.md                                                                                                        
-├── README.md                                                                                                           
-└── suggestions.md  
-
-
-├── code                                                                                                                
-│   ├── house_EDA.ipynb                                                                                                 
-│   └── house_reg_model.ipynb                                                                                           
-├── datasets                                                                                                            
-│   ├── data_given.txt                                                                                                  
-│   ├── sample_sub_reg.csv                                                                                              
-│   ├── test.csv                                                                                                        
-│   └── train.csv                                                                                                       
-├── README_GA.md                                                                                                        
-├── README.md                                                                                                           
-└── suggestions.md    
+│   ├── lasso.png                                                                                                       
+│   ├── lasso_res.png                                                                                                   
+│   ├── lasso_vs_ridge.png                                                                                              
+│   ├── least_square_sol.png                                                                                            
+│   ├── lin_reg_res.png                                                                                                 
+│   ├── mixed_res.png                                                                                                   
+│   ├── ridge.png                                                                                                       
+│   └── wiki_skewness.png                                                                                                                     ├── Project 2_slide.pdf                                                                                                 
+└── README.md        
 ```    
 ---
 contents  
 1. [Problem Statement](#Problem-Statement)  
-2. [Exploratary Data Analysis](./code/house_EDA.ipynb)
-3. Data table/ dictionary
-4. Modelling
-5. Results and Conclusions
-
+2. [Exploratary Data Analysis](#Data-Cleaning-and-EDA)
+3. [Data](#Data)
+4. [Modelling](#Preprocessing-and-Modeling)
+5. [Results and Conclusions](#Results-and-Conclusions)
 ---
 ## Problem Statement  
 The goal of this project is to build a regression model, using data contained in the [datasets](./datasets) folder. The model should be able to make an accurate prediction of the resale price (`resale_price`) of the house, for every house id (`Id`) that appeared in the [test set](./datasets/test.csv).  
@@ -64,87 +47,42 @@ Success will be evaluated based on common evaluation metrics such as Mean Absolu
 Motivation:  
 While this is a toy project for the purpose of learning, it shows the importance of prediction models.  
 House owners who are looking to sale their property, property agents, those seeking to purchase a house, all stand to benefit from this model.  
-- Is it clear what the student plans to do?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
 
 ---
-##Data Cleaning and EDA  
-- Are missing values imputed appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
+## Data Cleaning and EDA  
+This project is about the prediction of resale price of a house located in singapore, using simple regression model.   
+This [notebook](./code/house_EDA.ipynb) covers the Exploratory Data Analysis (EDA).    
+This picks out the important features that can be used to predict the flat resale price.   
+
 ---
+## Preprocessing and Modeling
+This note book will show the process of building regression model(s) to predict the housing price in Singapore.  
+Models covered are:   
+- Linear regression  
+- Lasso regression  
+- Ridge regression  
+- Elastic Net regression  
+- Combined Model  
+The models are then analysed.   
 
-**Preprocessing and Modeling**
-- Are categorical variables one-hot encoded?
-- Does the student investigate or manufacture features with linear relationships to the target?
-- Have the data been scaled appropriately?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student utilize feature selection to remove noisy or multi-collinear features?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** linear regression, lasso, and ridge)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
+---
+## Data
+This is [data](./datasets/) that contains the data dictionary, and all datasets and results.   
 
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Is more than one metric utilized in order to better assess performance?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
+---
+## Results and Conclusions
+Out of all the models, the simple linear regression model have the best performance.  
+The combination of models do have a lot of potential, and can probably be improved by tuning the hyper parameters, such as the weightage on different models.  
+Also, the classification of models can be made better.   
+For exmample, I can exclude the three room flats and shift it to the more room category.  
+Otherwise, I can also try to further refine the model by flat type and location.  
 
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
+The simple linear regression model is able to explain both the train and test data well.   
+However, the unfortunate thing is that some factors can't be taken into account.  
+Such as the direction the flat is facing, government policies and interventions.  
 
-### Organization and Professionalism
-
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
-
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
-
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` methods used appropriately?
-
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
-
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
+In conclusion, a simple linear model is able to explain most of the resale flats, by selecting the proper features.  
+The R sqaured is 0.8912.  
+This means that 89.12% of the variation in resale price to test set, which is not seen by model, can be explianed by the model.  
+The RMSE is around $47,000.  
+This means that the actual price is very likely around predicted price +/- RMSE, on average.  
