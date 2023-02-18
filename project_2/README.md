@@ -6,7 +6,8 @@ The project struture is as follows:
 project_2      
 ├── code                                                                                                                
 │   ├── house_EDA.ipynb                                                                                                 
-│   └── house_reg_model.ipynb                                                                                                                  ├── datasets                                                                                                            
+│   └── house_reg_model.ipynb             
+├── datasets                                                                                                            
 │   ├── data_dictionary_analysis.csv                                                                                    
 │   ├── data_given.txt                                                                                                  
 │   ├── planning_area.csv                                                                                               
@@ -29,7 +30,8 @@ project_2
 │   ├── lin_reg_res.png                                                                                                 
 │   ├── mixed_res.png                                                                                                   
 │   ├── ridge.png                                                                                                       
-│   └── wiki_skewness.png                                                                                                                     ├── Project 2_slide.pdf                                                                                                 
+│   └── wiki_skewness.png                                            
+├── Project 2_slide.pdf                                                                                                 
 └── README.md        
 ```    
 ---
