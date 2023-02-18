@@ -67,7 +67,7 @@ The models are then analysed.
 
 ---
 ## Data
-This is [data](./datasets/) that contains the data dictionary, and all datasets and results.   
+This is [data folder](./datasets/) that contains the data dictionary, and all datasets and results.   
 
 ---
 ## Results and Conclusions
