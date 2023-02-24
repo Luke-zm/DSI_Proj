@@ -9,3 +9,6 @@ temp/
 
 # ignore ALL .Identifier
 *.Identifier
+
+# ignore praw.ini
+praw.ini
