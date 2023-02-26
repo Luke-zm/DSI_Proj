@@ -22,10 +22,32 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 ---
 ## Problem Statement
 
-For project 3, your goal is two-fold:
-1. You'll collect posts from two subreddits of your choosing. You can use [Pushshift's](https://github.com/pushshift/api) API or any other low-code platform for the same. 
-Alternatively, you can web-scrape or use any low-code platform, eg., parse-hub, collect data from twitter, wiki, facebook, insta etc.
-1. You'll then use NLP to train a classifier on which subreddit (or other sub-sections based on the site you choose to scrape your data from) a given post came from. This is a binary classification problem.
+Now, imagine that I am working for a gaming news platform.  
+My platform is rolling out a new service, pushing interesting contents from a bank of mixed up posts to user, based on ther user's preference.  
+Before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
+Somehow the contents the game news platform generates is very similar to reddit, so I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
+
+For this project, my goal is two-fold:  
+1. I will collect posts from two subreddits. `r/nintendo` and `r/playstation`, using API.  
+2. I will then use NLP to train a classifier on which subreddit a given post came from. This is a binary classification problem.  
+
+---
+## Data Gathering
+
+The data from `r/nintendo` and `r/playstation` will be gathered using `praw`, [The Python Reddit API Wrapper](https://praw.readthedocs.io/en/stable/).  
+These data will then be saved into 2 different csv files under the `data` folder.  
+They are:  
+[nintendo_posts.csv](./data/nintendo_posts.csv)  
+[playstation_posts.csv](./data/playstation_posts.csv)
+
+### Data dictionary
+|no|feature|description|
+|-|-|-|
+|1|id|the unique id to each reddit post, used to make only 1 post is scrapped|
+|2|title|title of the post scrapped|
+|3|post_content|if the post is word post, then post content exit|
+
+---
 
 
 ### Requirements
