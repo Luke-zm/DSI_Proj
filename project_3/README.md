@@ -23,6 +23,10 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 ## Problem Statement
 
 Now, imagine that I am working for a gaming news platform.  
+This is a very special platform!  
+It is a centralised gamming forum that is based on reddit.  
+For example, I want to post some random thoughts, all I have to do is simply post, and then this post will appear in the correct subreddit.  
+Additionally, if I want to look at posts by other users, then all I have to do is to type some key words, then suggested posts based on my topic will appear.  
 My platform is rolling out a new service, pushing interesting contents from a bank of mixed up posts to user, based on ther user's preference.  
 Before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
 Somehow the contents the game news platform generates is very similar to reddit, so I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
