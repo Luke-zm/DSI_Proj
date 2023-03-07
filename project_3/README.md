@@ -44,6 +44,11 @@ They are:
 [nintendo_posts.csv](./data/nintendo_posts.csv)  
 [playstation_posts.csv](./data/playstation_posts.csv)
 
+A class function is written for this task.  
+It will be able to automate the collection of data.  
+It can also save and extend the current csv file should new data under the same topic appear.  
+A simple way to obtain the possible attribute and methods for the PRAW package is also included.
+
 ### Data dictionary
 |no|feature|description|
 |-|-|-|
@@ -52,7 +57,35 @@ They are:
 |3|post_content|if the post is word post, then post content exit|
 
 ---
+### Data EDA
 
+Features like user, posting habbits like use of emojis and use of pictures were examined.
+The number of occurance of words are counted, length of titles are also examined.
+Distribution of number of words used to form title are presented graphically.  
+Occurance of each words are for the top words are also examined.  
+
+A word cloud is generated:  
+<img src='./img/ntd_ps_1st.png'></img>
+
+Then, a simple basic and most naive model that may not even worth 1 point in GA is built.  
+It uses TFIDF and Multinominal Naive Bayes.   
+Multinominal Naive Bayes is used becuase the text data is not normally distributed.  
+TFIDF is used because the number of occurance of the term is not as important as the term itself.   
+Hence I also look at the number of appearance of a term in a single document (1 title).  
+The results are good, simply because the give away words are not removed.  
+
+Results for the most basic NB model are:  
+
+- The recall of this inference is: 0.93
+- The precision of this inference is: 0.91
+- The f1 score for this inference is: 0.92
+
+The condusion matrix is:  
+<img src='./img/basic_nb.png'></img>
+
+Removing the key give away words like `nintendo` and `playstation` decreases the model performance slightly, but not too much.  
+Removing words like `got` and `day` had no impact on the test set.  
+This result is very likely due to the use of TF-IDF in the tokeninsation process.  
 
 ### Requirements
 
