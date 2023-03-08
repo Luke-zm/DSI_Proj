@@ -82,26 +82,26 @@ For Project 3 the evaluation categories are as follows:<br>
 ### The Data Science Process
 
 **Problem Statement**
-- Is it clear what the goal of the project is?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
+- Is it clear what the goal of the project is?   (No)    
+- What type of model will be developed?   (No)   
+- How will success be evaluated?    (No)   
+- Is the scope of the project appropriate?    (yes)     
+- Is it clear who cares about this or why this is important to investigate?    (No)    
+- Does the student consider the audience and the primary and secondary stakeholders?  (No)     
 
 **Data Collection**
-- Was enough data gathered to generate a significant result?
-- Was data collected that was useful and relevant to the project?
-- Was data collection and storage optimized through custom functions, pipelines, and/or automation?
-- Was thought given to the server receiving the requests such as considering number of requests per second?
+- Was enough data gathered to generate a significant result? yes  
+- Was data collected that was useful and relevant to the project? yes   
+- Was data collection and storage optimized through custom functions, pipelines, and/or automation? yes  
+- Was thought given to the server receiving the requests such as considering number of requests per second? yes  
 
 **Data Cleaning and EDA**
-- Are missing values imputed/handled appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
+- Are missing values imputed/handled appropriately?  ????
+- Are distributions examined and described?  yes    
+- Are outliers identified and addressed? ????
+- Are appropriate summary statistics provided?  ????   
+- Are steps taken during data cleaning and EDA framed appropriately? yes     
+- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA? no....
 
 **Preprocessing and Modeling**
 - Is text data successfully converted to a matrix representation?
