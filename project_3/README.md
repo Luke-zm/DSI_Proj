@@ -22,18 +22,25 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 ---
 ## Problem Statement
 
-Now, imagine that I am working for a gaming news platform.  
-This is a very special platform!  
-It is a centralised gamming forum that is based on reddit.  
+Now, imagine that I am working for reddit and now reddit want to automate forum control, for users from r/nintendo and r/playstation.  
 For example, I want to post some random thoughts, all I have to do is simply post, and then this post will appear in the correct subreddit.  
 Additionally, if I want to look at posts by other users, then all I have to do is to type some key words, then suggested posts based on my topic will appear.  
-My platform is rolling out a new service, pushing interesting contents from a bank of mixed up posts to user, based on ther user's preference.  
-Before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
-Somehow the contents the game news platform generates is very similar to reddit, so I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
+ 
+Now, before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
+Believe me, nintendo and sony had a long history of war between them...([Read more here](https://venturebeat.com/games/the-story-behind-nintendos-betrayal-of-sony-and-how-it-created-its-fiercest-rival/))   
+I defientely wouldn't want to mix up nintendo and sony...   
+So...   
+I have to create some way to distinguish the nintendo posts from sony!   
+By using a classifier and my NLP techniques.  
+I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
 
 For this project, my goal is two-fold:  
 1. I will collect posts from two subreddits. `r/nintendo` and `r/playstation`, using API.  
 2. I will then use NLP to train a classifier on which subreddit a given post came from. This is a binary classification problem.  
+
+My classifier should have accurate prediction.  
+It should have high f1 score, meaning both precision, the precentage of correctly making a positive prediction; and recall, precentage of actual positive detected ("recalled") by the classifier, should be high.  
+F1 score, the harmonic mean/ weighted average of recall and precision need to be high for my classifier.  
 
 ---
 ## Data Gathering
