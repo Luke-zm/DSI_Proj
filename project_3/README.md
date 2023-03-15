@@ -22,10 +22,13 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 The repo is organised in the following structure:
 ```console
 .    
-├── code                                                                                                                                              │   ├── data_eda.ipynb                                                                                                                                │   ├── modelling.ipynb                                                                                                           
+├── code                        
+│   ├── data_eda.ipynb                                                                                                                                
+│   ├── modelling.ipynb                                                                                                           
 │   └── scrape_reddit.ipynb                                                                                               
 ├── data                                                                                                                
-│   ├── combined_df.csv                                                                                                                                │   ├── nintendo_posts.csv                                                                                              
+│   ├── combined_df.csv                                                                                                                                
+│   ├── nintendo_posts.csv                                                                                              
 │   ├── playstation_posts.csv                                                                                           
 │   ├── stopwords.pkl                                                                                                   
 │   └── test_results.csv                                                                                                
@@ -35,8 +38,11 @@ The repo is organised in the following structure:
 │   ├── no_stem_n_lemma.png                                                                                             
 │   ├── no_stem.png                                                                                                     
 │   ├── ntd_ps_1st.png                                                                                                  
-│   └── remove_link_stripe.png                                                                                                                        ├── model                                                                                                               
-│   └── prelim_model.joblib                                                                                                                            └── README.md 
+│   └── remove_link_stripe.png                                                                                                                        
+├── model                                                                                                               
+│   └── prelim_model.joblib     
+├── project_3.pdf 
+└── README.md 
 ```
 
 ---
