@@ -19,6 +19,26 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 2. Marketing campaigns: Nintendo or PlayStation may want to monitor Twitter to gauge how successful their marketing campaigns are, and whether they are resonating with their target audience.
 3. Product development: Companies may want to analyze the feedback on Twitter to identify what features and products their customers are asking for, and adjust their product development accordingly.
 
+The repo is organised in the following structure:
+```console
+.    
+├── code                                                                                                                                              │   ├── data_eda.ipynb                                                                                                                                │   ├── modelling.ipynb                                                                                                           
+│   └── scrape_reddit.ipynb                                                                                               
+├── data                                                                                                                
+│   ├── combined_df.csv                                                                                                                                │   ├── nintendo_posts.csv                                                                                              
+│   ├── playstation_posts.csv                                                                                           
+│   ├── stopwords.pkl                                                                                                   
+│   └── test_results.csv                                                                                                
+├── img                                                                                                                
+│   ├── basic_nb.png                                                                                                    
+│   ├── no_lemma.png                                                                                                    
+│   ├── no_stem_n_lemma.png                                                                                             
+│   ├── no_stem.png                                                                                                     
+│   ├── ntd_ps_1st.png                                                                                                  
+│   └── remove_link_stripe.png                                                                                                                        ├── model                                                                                                               
+│   └── prelim_model.joblib                                                                                                                            └── README.md 
+```
+
 ---
 ## Problem Statement
 
@@ -30,7 +50,7 @@ Now, before I push the post to the Nintendo/ PlayStation fans, I will first need
 Believe me, nintendo and sony had a long history of war between them...([Read more here](https://venturebeat.com/games/the-story-behind-nintendos-betrayal-of-sony-and-how-it-created-its-fiercest-rival/))   
 I defientely wouldn't want to mix up nintendo and sony...   
 So...   
-I have to create some way to distinguish the nintendo posts from sony!   
+I have to create some way to distinguish the nintendo posts from playstation!   
 By using a classifier and my NLP techniques.  
 I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
 
@@ -41,6 +61,8 @@ For this project, my goal is two-fold:
 My classifier should have accurate prediction.  
 It should have high f1 score, meaning both precision, the precentage of correctly making a positive prediction; and recall, precentage of actual positive detected ("recalled") by the classifier, should be high.  
 F1 score, the harmonic mean/ weighted average of recall and precision need to be high for my classifier.  
+It also should be relatively light weight and easy to use.  
+It will be built using TFIDF.  
 
 ---
 ## Data Gathering
@@ -54,7 +76,8 @@ They are:
 A class function is written for this task.  
 It will be able to automate the collection of data.  
 It can also save and extend the current csv file should new data under the same topic appear.  
-A simple way to obtain the possible attribute and methods for the PRAW package is also included.
+A simple way to obtain the possible attribute and methods for the PRAW package is also included.  
+More deatils are given in the note book itself.  
 
 ### Data dictionary
 |no|feature|description|
@@ -94,23 +117,48 @@ Removing the key give away words like `nintendo` and `playstation` decreases the
 Removing words like `got` and `day` had no impact on the test set.  
 This result is very likely due to the use of TF-IDF in the tokeninsation process.  
 
-### Requirements
-
-- Gather and prepare your data using the `requests` library.
-- **Create and compare two models**. One of these must be a Naive Bayes classifier, however the other can be a classifier of your choosing: logistic regression, KNN, SVM, etc.
-- A Jupyter Notebook with your analysis for a peer audience of data scientists.
-- An executive summary of your results.
-- A short presentation outlining your process and findings for a semi-technical audience.
-
-**Pro Tip:** You can find a good example executive summary [here](https://www.proposify.biz/blog/executive-summary).
-
 ---
+### Modelling
 
-### Necessary Deliverables / Submission
+The models tried out are:
+1. Navie Bayes
+2. Logistic Regression
+3. Random Forest
+4. XGBoost
 
-- Code must be in at least one clearly commented Jupyter Notebook.
-- A readme/executive summary in markdown.
-- You must submit your slide deck as a PDF.
-- Materials must be submitted by the specified date given by the Instructional Team through your GitHub account repo shared with the Instructional Team.
+A navie baseline model is also built to show how good these models tried when compared against the most naive random guesses.  
 
----
+After which, pipeline is built with TF-IDF as the first step and the respective algorithms for prediction as the second step.  
+Results are analysed using a test set making up 20% of the entire collected data set.  
+This test set is not used in training at all.  
+The prediction result on the validation set is also reviewed to see if the model can generalise well.  
+Predictions made by the models are then saved into a file [test_results.csv](./data/test_results.csv) for comparison. 
+
+The detailed analysis is done for each models above, and just to repeat, models mostly have similar performance.  
+It is concluded that the corpus is extremely important in this case.   
+There tend to be a higher number of false negatives for all models.   
+This is to be expected.  
+Looking back to the base line model, it can be seen that there's also more false negatives.  
+This is becase my data included more posts from the `playstation` subreddit.  
+So this is expected and acceptable.  
+The simpler models actually performed exceptionally well.  
+Like logistic regression and naive bayes.  
+
+As mentioned in my readme.md, my goal is clear.   
+It is to automate the forum control for both nintendo and playstation forums.  
+Unfortunately, I can not simply choose nintendo over playstation.  
+As such, a model with a good overall performance, in terms of the f1 score, is preferred.   
+
+For ML models, I will probably select the naive bayes based model for production.  
+Reason is that is gives good generalisation, have high f1 socre and performs well under most circumstances.  
+Should I really want to make the `nintendo` fans happy, I can use the XGBoost model, or the logistic regression model, which focuses on being precise and specific.  
+Where:  
+`precision = true positives / (true positives + false positives)`  
+and  
+`specificity = true negatives / (true negatives + false positives)`
+
+However, logistic regression model is also very worthy of a special mention here!  
+It is the best perfoming model with the highest f1 socre, and least flase negatives, while being light weight and very very very explainable.  
+The only reason it is not selected is that it is highly dependent on the word corpus...  
+Also, it is easy to confuse it, which will be shown in the note book for modelling.  
+
