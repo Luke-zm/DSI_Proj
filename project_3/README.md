@@ -116,7 +116,7 @@ Results for the most basic NB model are:
 - The precision of this inference is: 0.91
 - The f1 score for this inference is: 0.92
 
-The condusion matrix is:  
+The confusion matrix is:  
 <img src='./img/basic_nb.png'></img>
 
 Removing the key give away words like `nintendo` and `playstation` decreases the model performance slightly, but not too much.  
