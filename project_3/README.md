@@ -48,9 +48,10 @@ The repo is organised in the following structure:
 ---
 ## Problem Statement
 
-Now, imagine that I am working for reddit and now reddit want to automate forum control, for users from r/nintendo and r/playstation.  
-For example, I want to post some random thoughts, all I have to do is simply post, and then this post will appear in the correct subreddit.  
-Additionally, if I want to look at posts by other users, then all I have to do is to type some key words, then suggested posts based on my topic will appear.  
+Now, imagine that I am working for reddit and now reddit want to simplify the content posting process, so I employ an automated forum control tool, for users from r/nintendo and r/playstation.  
+For example, I want to post some random thoughts, I really just want to make a quick post and I don't want to go to the individual forum.  
+All I want to do is simply post, and as if by magic, this post will appear in the correct subreddit.  
+This makes life so much simpler!  
  
 Now, before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
 Believe me, nintendo and sony had a long history of war between them...([Read more here](https://venturebeat.com/games/the-story-behind-nintendos-betrayal-of-sony-and-how-it-created-its-fiercest-rival/))   
@@ -150,7 +151,6 @@ So this is expected and acceptable.
 The simpler models actually performed exceptionally well.  
 Like logistic regression and naive bayes.  
 
-As mentioned in my readme.md, my goal is clear.   
 It is to automate the forum control for both nintendo and playstation forums.  
 Unfortunately, I can not simply choose nintendo over playstation.  
 As such, a model with a good overall performance, in terms of the f1 score, is preferred.   
