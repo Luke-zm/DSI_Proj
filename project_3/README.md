@@ -24,7 +24,8 @@ The repo is organised in the following structure:
 .                                 
 ├── code                                                                                                                
 │   ├── data_eda.ipynb                                                                                                  
-│   ├── modelling.ipynb                                                                                                                                │   └── scrape_reddit.ipynb                                                                                             
+│   ├── modelling.ipynb                                                                                                                                
+│   └── scrape_reddit.ipynb                                                                                             
 ├── data                                                                                                                
 │   ├── combined_df.csv                                                                                                 
 │   ├── nintendo_posts.csv                                                                                              
