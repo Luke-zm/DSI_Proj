@@ -21,28 +21,32 @@ There may be a need to identify if a comment is posted on Twitter by Nintendo or
 
 The repo is organised in the following structure:
 ```console
-.    
-├── code                        
-│   ├── data_eda.ipynb                                                                                                                                
-│   ├── modelling.ipynb                                                                                                           
-│   └── scrape_reddit.ipynb                                                                                               
+.                                 
+├── code                                                                                                                
+│   ├── data_eda.ipynb                                                                                                  
+│   ├── modelling.ipynb                                                                                                                                │   └── scrape_reddit.ipynb                                                                                             
 ├── data                                                                                                                
-│   ├── combined_df.csv                                                                                                                                
+│   ├── combined_df.csv                                                                                                 
 │   ├── nintendo_posts.csv                                                                                              
 │   ├── playstation_posts.csv                                                                                           
 │   ├── stopwords.pkl                                                                                                   
 │   └── test_results.csv                                                                                                
-├── img                                                                                                                
+├── img                                                                                                                 
 │   ├── basic_nb.png                                                                                                    
+│   ├── log.png                                                                                                         
+│   ├── mario_cloud.png                                                                                                 
+│   ├── mario.png                                                                                                       
+│   ├── nintendo.png                                                                                                    
 │   ├── no_lemma.png                                                                                                    
 │   ├── no_stem_n_lemma.png                                                                                             
 │   ├── no_stem.png                                                                                                     
 │   ├── ntd_ps_1st.png                                                                                                  
-│   └── remove_link_stripe.png                                                                                                                        
-├── model                                                                                                               
-│   └── prelim_model.joblib     
-├── project_3.pdf 
-└── README.md 
+│   └── remove_link_stripe.png                                                                                          
+├── model        
+│   ├── log_reg_prod.joblib 
+│   └── prelim_model.joblib                                                                                             
+├── Nintendo vs Playstation.pdf                                                                                     
+└── README.md  
 ```
 
 ---
@@ -102,7 +106,7 @@ Distribution of number of words used to form title are presented graphically.
 Occurance of each words are for the top words are also examined.  
 
 A word cloud is generated:  
-<img src='./img/ntd_ps_1st.png'></img>
+<img src='./img/mario_cloud.png'></img>
 
 Then, a simple basic and most naive model that may not even worth 1 point in GA is built.  
 It uses TFIDF and Multinominal Naive Bayes.   
@@ -155,16 +159,33 @@ It is to automate the forum control for both nintendo and playstation forums.
 Unfortunately, I can not simply choose nintendo over playstation.  
 As such, a model with a good overall performance, in terms of the f1 score, is preferred.   
 
-For ML models, I will probably select the naive bayes based model for production.  
+For ML models, I will probably select the logistic regression based model for production.  
 Reason is that is gives good generalisation, have high f1 socre and performs well under most circumstances.  
-Should I really want to make the `nintendo` fans happy, I can use the XGBoost model, or the logistic regression model, which focuses on being precise and specific.  
+It is also the most explainable!   
+It is also very fast in terms of training and prediction.  
+This is partly due to the samll corpus I have now.  
+However, I can easily scale up Logistic Regression model by expanding the corpus and still quickly get a result when doing inference.  
+
+This is the result from my logistic regression's inference on my test set:
+```console
+The accuracy of this inference is: 0.8950064020486556
+The precision of this inference is: 0.9390581717451524
+The specificity of this inference is: 0.9424083769633508
+The recall of this inference is: 0.849624060150376
+The f1 score for this inference is: 0.8921052631578947
+```
+
+<img src='./img/log.png' width="400" height="400"></img>
+
+Should I really want to make the `nintendo` fans happy, I can use the XGBoost model, which focuses on being precise and specific.  
 Where:  
 `precision = true positives / (true positives + false positives)`  
 and  
 `specificity = true negatives / (true negatives + false positives)`
 
-However, logistic regression model is also very worthy of a special mention here!  
-It is the best perfoming model with the highest f1 socre, and least flase negatives, while being light weight and very very very explainable.  
-The only reason it is not selected is that it is highly dependent on the word corpus...  
-Also, it is easy to confuse it, which will be shown in the note book for modelling.  
+The logistic regression model is the best perfoming single model with the highest f1 socre, and least flase negatives, while being light weight and very very very explainable.  
+The only pitfall is that it is highly dependent on the word corpus...  
+Also, it is easy to confuse it.  
 
+A naive combination of the models are also explored.  
+It is presented in the modelling notebook.  
