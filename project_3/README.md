@@ -70,6 +70,7 @@ To build this classifier, I followed these steps:
 I scraped thousands of posts from both subreddits using Python and stored them in a CSV file.   
 2.	Build a natural language processing pipeline to classify if a post is from r/Nintendo or r/Playstation.   
 I used scikit-learn to preprocess the text data, extract features using TF-IDF vectorizer and train a logistic regression model to predict the subreddit label.   
+
 The result should be a classifier that can correctly identify most of the posts based on their titles alone.   
 For example, if I type "What are some good games for Switch?", the classifier should tell me that it belongs on r/Nintendo.   
 If I type "Is Horizon Forbidden West worth buying?"3, it should tell me that it belongs on r/Playstation.
