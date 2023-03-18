@@ -53,18 +53,32 @@ The repo is organised in the following structure:
 ---
 ## Problem Statement
 
-Now, imagine that I am working for reddit and now reddit want to simplify the content posting process, so I employ an automated forum control tool, for users from r/nintendo and r/playstation.  
-For example, I want to post some random thoughts, I really just want to make a quick post and I don't want to go to the individual forum.  
-All I want to do is simply post, and as if by magic, this post will appear in the correct subreddit.  
-This makes life so much simpler!  
+Now, imagine that I am working for reddit and now reddit want to simplify the content posting process, so I employ an automated forum control tool, for users from r/nintendo and r/playstation. 
+
+Reddit is a platform where users can post and discuss anything they want, from memes to politics to gaming.   
+But sometimes, posting on Reddit can be confusing.   
+How do you know which subreddit to post your content on? What if you post something on r/Nintendo that belongs on r/Playstation?   
+You might get downvoted, ignored or even banned!  
+
+That’s why I’m here to present you my project: Reddit, made simple.   
+It should be a natural language processing classifier that can automatically determine which subreddit your post belongs on based on the title of your post.   
+It should be simple, fast and accurate.   
+
+To build this classifier, I followed these steps:
+
+1.	Collect data from r/Nintendo and r/Playstation.   
+I scraped thousands of posts from both subreddits using Python and stored them in a CSV file.   
+2.	Build a natural language processing pipeline to classify if a post is from r/Nintendo or r/Playstation.   
+I used scikit-learn to preprocess the text data, extract features using TF-IDF vectorizer and train a logistic regression model to predict the subreddit label.   
+The result should be a classifier that can correctly identify most of the posts based on their titles alone.   
+For example, if I type "What are some good games for Switch?", the classifier should tell me that it belongs on r/Nintendo.   
+If I type "Is Horizon Forbidden West worth buying?"3, it should tell me that it belongs on r/Playstation.
+This classifier can be useful for anyone who wants to post on Reddit without worrying about choosing the wrong subreddit.   
+It can also be used as a tool for analyzing Reddit data and understanding user preferences and behaviors.
  
-Now, before I push the post to the Nintendo/ PlayStation fans, I will first need to identify where these posts come from.  
 Believe me, nintendo and sony had a long history of war between them...([Read more here](https://venturebeat.com/games/the-story-behind-nintendos-betrayal-of-sony-and-how-it-created-its-fiercest-rival/))   
 I defientely wouldn't want to mix up nintendo and sony...   
 So...   
-I have to create some way to distinguish the nintendo posts from playstation!   
-By using a classifier and my NLP techniques.  
-I decided to gather some reddit posts and make a classifier which can identify is the post is from r/nintendo or r/playstation.  
 
 For this project, my goal is two-fold:  
 1. I will collect posts from two subreddits. `r/nintendo` and `r/playstation`, using API.  
