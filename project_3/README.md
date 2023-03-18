@@ -113,8 +113,8 @@ To my surprise, the number of users who posts on both r/nintendo and r/playstati
 There are only 9 users out of 2750 unique users in total...
 
 Top 15 words in ascending order:
+|words|	count|
 |-|-|
-||	count|
 |play|	95|
 |history|	100|
 |years|	103|
@@ -132,8 +132,8 @@ Top 15 words in ascending order:
 |nintendo|	882|
 
 Summary Statistics:
-|-|-|-|
 ||	title_word_count|	title_len|
+|-|-|-|
 |count|	3904.000000|	3904.000000|
 |mean|	11.070697|	62.437244|
 |std|	7.165345|	40.521917|
