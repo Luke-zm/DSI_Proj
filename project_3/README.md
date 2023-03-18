@@ -106,6 +106,43 @@ The number of occurance of words are counted, length of titles are also examined
 Distribution of number of words used to form title are presented graphically.  
 Occurance of each words are for the top words are also examined.  
 
+Out of the 3904 posts collected, only 2750 users are unique.
+This means that there are many users who posted more than 1 post.
+They are probably the very active users.
+To my surprise, the number of users who posts on both r/nintendo and r/playstation is very few...
+There are only 9 users out of 2750 unique users in total...
+
+Top 15 words in ascending order:
+|-|-|
+||	count|
+|play|	95|
+|history|	100|
+|years|	103|
+|got|	111|
+|ps4|	124|
+|day|	148|
+|playstation|	166|
+|super|	196|
+|new|	235|
+|games|	276|
+|mario|	309|
+|switch|	366|
+|game|	367|
+|ps5|	403|
+|nintendo|	882|
+
+Summary Statistics:
+|-|-|-|
+||	title_word_count|	title_len|
+|count|	3904.000000|	3904.000000|
+|mean|	11.070697|	62.437244|
+|std|	7.165345|	40.521917|
+|min|	1.000000|	2.000000|
+|25%|	6.000000|	33.000000|
+|50%|	10.000000|	54.000000|
+|75%|	14.000000|	81.000000|
+|max|	55.000000|	299.000000|
+
 A word cloud is generated:  
 <img src='./img/mario_cloud.png'></img>
 
