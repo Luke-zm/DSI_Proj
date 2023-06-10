@@ -9,8 +9,7 @@ Contents:
 Project 1: [Weather and Striats Times Index](/project_1)  
 Project 2: [Housing price prediction using only regression](/project_2)   
 Project 3: [Nintendo vs PlayStation comment classifier](/project_3)  
-Project 4:  
-Capstone Project:   
+Project 4:  [Dengue case prediction in Singapore](https://github.com/Luke-zm/GA_project4_PredictDengueCases)
 
 ---
 ## Project 1: EDA on Singapore Weather and ST Index   
