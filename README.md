@@ -35,5 +35,10 @@ Part 2: Build NLP model to decide if the comment is from Nintendo or PlayStation
 The detailed README is for this project can be found [here](/project_3/README.md).
 
 ---
+## Project 4: Dengue case predictioon
+
+This project is a team project.
+Please see my forked [repo](https://github.com/Luke-zm/GA_project4_PredictDengueCases) for this project.
+
 ---
 
